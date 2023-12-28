@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0; 
+    background-image: url("../images/backgrounds/01.jpg");
+    background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+ }
+form{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: blue;
+}
+.login_box{
+    position: relative;
+    top: 150px;
+    left: 15%;
+    width: 30%;
+    background-color: #ffffff;
+    border: 1px solid #EDEDED;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+.login_header{
+    width: 100%;
+    height: 90px;
+    background-color: #000080;
+    color: #fff;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.login_header h1{
+    padding-top: 10px ;
+    margin-top: 0px;
+    margin-bottom: 0;
+    color: #fff;
+    text-shadow: #73B6E2 0.5px 0.5px 0px; 
+    font-size: 250%;
+}
+input[type="submit"]{
+    background-color: #000080;
+    border: 1px solid #EDEDED;
+    border-radius: 5px;
+    margin: 5px 0 10px 0;
+    padding: 10px 15px 10px 15px;
+    color: #fff;
+    text-shadow: #73B6E2 0.5px 0.5px 0px;
+    font-size: 100%;
+}
+input[type="text"],[type="email"],[type="password"]{
+    border: 1px solid #e5e5e5;
+    margin-top:5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+input[type="text"]:hover,[type="email"]:hover,[type="password"]:hover{
+    border-color: #3498db;
+}
+.second{
+    display: none;
+}

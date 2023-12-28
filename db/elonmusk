@@ -1,0 +1,109 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 07, 2022 at 09:02 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `elonmusk`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `choices`
+--
+
+CREATE TABLE `choices` (
+  `id` int(20) NOT NULL,
+  `question_number` int(20) NOT NULL,
+  `is_correct` tinyint(1) NOT NULL DEFAULT 0,
+  `text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `choices`
+--
+
+INSERT INTO `choices` (`id`, `question_number`, `is_correct`, `text`) VALUES
+(1, 1, 0, 'the past'),
+(2, 1, 0, 'the present'),
+(3, 1, 1, 'the future'),
+(4, 2, 0, 'far in the future'),
+(5, 2, 0, 'fairly soon'),
+(6, 2, 1, 'next'),
+(7, 3, 0, ' is'),
+(8, 3, 1, ' be'),
+(9, 3, 0, ' are'),
+(10, 4, 0, ' is going'),
+(11, 4, 0, 'going to'),
+(12, 4, 1, 'to arrive'),
+(13, 5, 1, 'an intention'),
+(14, 5, 0, 'a prediction'),
+(15, 5, 0, 'neither');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `question`
+--
+
+CREATE TABLE `question` (
+  `question_number` int(20) NOT NULL,
+  `text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `question`
+--
+
+INSERT INTO `question` (`question_number`, `text`) VALUES
+(1, 'Going to is usually used to talk about'),
+(2, '\"Watch out! I\'m going to sneeze!\" This predicts what will happen'),
+(3, 'What\'s the base form of the verb that always comes somewhere before going to?'),
+(4, '\"The train is going to arrive in an hour.\" Which is the infinitive verb?'),
+(5, '\"I\'m going to change my password.\" This expresses');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `choices`
+--
+ALTER TABLE `choices`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `question`
+--
+ALTER TABLE `question`
+  ADD PRIMARY KEY (`question_number`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `choices`
+--
+ALTER TABLE `choices`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
